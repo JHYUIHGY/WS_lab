@@ -1,1 +1,3 @@
 pymol-edu-license.lic
+venv/
+__pycache__/
