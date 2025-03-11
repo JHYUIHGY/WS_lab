@@ -177,13 +177,13 @@ def main():
     plt.ylabel("RMSD vs 4AKE (open)")
     plt.title("Distribution of AF2 ADK Predictions: RMSD to 1AKE vs 4AKE")
 
-    # # Optionally label points with the structure ID
-    # texts = []
-    # for i, label in enumerate(structure_labels):
-    #     texts.append(plt.text(rmsd_1[i], rmsd_4[i], label, fontsize=8, ha='left', va='bottom'))
+    # Optionally label points with the structure ID
+    texts = []
+    for i, label in enumerate(structure_labels):
+        texts.append(plt.text(rmsd_1[i], rmsd_4[i], label, fontsize=8, ha='left', va='bottom'))
 
-    # # Adjust text to prevent overlap
-    # adjust_text(texts, arrowprops=dict(arrowstyle="->", color='gray', lw=0.5))
+    # Adjust text to prevent overlap
+    adjust_text(texts, arrowprops=dict(arrowstyle="->", color='gray', lw=0.5))
 
     plt.tight_layout()
     plt.savefig(output_file, dpi=300, bbox_inches='tight')
